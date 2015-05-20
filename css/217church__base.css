@@ -53,8 +53,21 @@
     .tk--brand01 {
         color:#ed1f24;
     }
+    .tk--alt01 {
+        color:#1c1c1c;
+    }
+    .tk--alt02 {
+        color:#fff;
+    }
     .tk--alert {
         color:#ff0000;
+    }
+
+    .bg--brand01 {
+        background-color:#ed1f24;
+    }
+    .bg--alt01 {
+        background-color:#1c1c1c;
     }
 
 
@@ -91,6 +104,12 @@
         max-width:64.5em;
         padding:0 1.5em;
         margin:0 auto;
+    }
+
+    @media screen and (min-width: 48em) {
+        .contentBox {
+            margin:0 0.75em;
+        }
     }
     
 
@@ -141,7 +160,8 @@
     section templates classes
     ================================================ */
     .section {
-        background:#1c1c1c 50% 50% / cover no-repeat;
+        background: 50% 50% / cover no-repeat;
+        padding-bottom:1.5em;
     }
 
         .section__scrollMe {
@@ -160,28 +180,40 @@
         }
 
         .section__hdr {
-            color:#fff;
-        }
-
-
-
-    /*  section--large classes
-        ================================================ */
-        .section--large {
-            min-height:32.5em;
-        }
-
-        .section--large .section__hdr {
-            margin:4.5em 0 1em 0; 
+            margin:1.388888em 0 1em 0; 
             font-size:2.25em;
             text-align: center;
             line-height: 1;
         }
-            .section--large .section__hdr .em {
+            .section__hdr .em {
                 font-size:1.3333333em;
                 font-weight: bold;
                 font-style: italic;
             }
+
+    .section--darkText {
+        color:#777;
+        background:none;
+    }
+        .section--darkText .section__hdr {
+            color:#1c1c1c;
+        }
+
+
+
+    /*  section height variations classes
+        ================================================ */
+        .section--large {
+            min-height:31em;
+        }
+
+        .section--med {
+            min-height:26em;
+        }
+
+        .section--small {
+            min-height:19em;
+        }
 
 
 
@@ -193,6 +225,7 @@
             .section--strip .section__hdr {
                 font-size:1.5em;
                 text-align: center;
+                margin:1.166666em 0 0.916666em 0;
             }
 
         
@@ -218,6 +251,7 @@
         }
     .campusLink__group {
         font-size:0.875em;
+        white-space: nowrap;
     }
         .campusLink__campus {
             color:#fff;
@@ -275,29 +309,37 @@
 
 
 /*  ================================================
-    introBoard__group classes
+    introSection classes
     ================================================ */
-    .introBoard__group {
+    .introSection {
         background-image:url('../img/header__blue-blur.jpg');
         text-align: center;
     }
+        .introSection .section__hdr {
+            margin:4.5em 0 1em 0;
+        }
 
 
 
 /*  ================================================
-    event__group classes
+    eventsSection classes
     ================================================ */
+    .eventsSection {
+        background:#1c1c1c;
+    }
     .event__group {
         position: relative;
+        min-height:4em;
+        margin-bottom:0.625em;
     }
 
         .event__date {
-            width:56px; height:64px;
+            width:3.5em; height:4em;
             position:absolute;
             top:0; left:0;
         }
             .event__date:after {
-                width:56px; height:64px;
+                width:100%; height:100%;
                 background-position:0 -50px;
             }
 
@@ -313,10 +355,158 @@
                 display: block;
                 margin:0.41666666em 0 0 0;
             }
+            .event__day {
+                position:relative;
+                z-index: 1;
+                color:#333;
+                text-align: center;
+                font-size: 1.75em;
+                line-height: 1;
+                margin:0.142857em 0 0 0;
+                width:100%;
+                display: block;
+            }
 
         .event__hdr {
             color:#fff;
             font-weight:1.5em;
+            line-height: 1.15;
             color:#fff;
-            margin:0;
+            margin:0 1rem 0 4.5rem;
         }
+            .event__link {
+                color:#fff;
+            }
+
+        .event__copy {
+            margin:0 1rem 0 4.5rem;
+            line-height: 1.25;
+        }
+            .event__copy p {
+                margin:3px 0;
+            }
+
+
+
+/*  ================================================
+    locationsSection classes
+    ================================================ */
+    .location__group {
+        margin-bottom:1.5em;
+    }
+        @media screen and (min-width: 48em) {
+            .location__group--hamilton {
+                margin-left:16.666666%;
+            }
+        }
+
+    .location__map {
+        display: block;
+        position: relative;
+        color:#fff;
+        text-align: center;
+    }
+        .location__map:after {
+            position:absolute;
+            z-index:0;
+            background: center center / cover no-repeat;
+            opacity:0.2;
+            width:100%; height:100%;
+            left:0; top:0;
+            content:'';
+        }
+
+        .location__map--hamilton:after {
+            background-image:url('../img/location__robbinsville.jpg');
+        }
+        .location__map--robbinsville:after {
+            background-image:url('../img/location__robbinsville.jpg');
+        }
+
+
+        .location__label {
+            display:block;
+            font-size:1.5em;
+            font-weight:bold;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            padding:20% 0 15%;
+        }
+            .location__label .fa {
+                display: block;
+                font-size:2em
+            }
+
+
+
+
+/*  ================================================
+    sermonSection classes
+    ================================================ */
+    .sermon__group {
+        margin:7em 0 0 0;
+        color:#fff;
+        position:relative;
+    }
+
+
+        .sermon__subText {
+            display: block;
+            text-transform: uppercase;
+        }
+            .sermon__subText .highlight {
+                padding:0.25em 0.625em;
+                display: inline-block;
+            }
+
+
+        .sermon__titleLink {
+            color:#fff;
+        }
+
+        .sermon__title {
+            font-size:2.25em;
+            line-height: 1.333333;
+            margin:0.67em 0 0 0;
+        }
+            .sermon__title .highlight {
+                padding:0.25rem 0.625rem 0.3125rem;
+                display: inline-block;
+            }
+
+
+        .sermon__reference {
+            margin:0.25em 0;
+            display: block;
+            font-size:1rem;
+        }
+
+
+        .sermon__quote {
+            margin:3.25em 0 0 0;
+            padding:0;
+            position: relative;
+        }
+            .sermon__quote .highlight {
+                display:inline-block;
+                font-size:2.25em;
+                font-style: italic;
+                line-height: 1.111111;
+                padding:0.5rem 2.5rem 0.625rem;
+                color:#fff;
+            }
+                .sermon__quote:before {
+                    content:'\201c';
+                    position:absolute;
+                    font-size:4em;
+                    top:-1rem;
+                    left:0.625rem;
+                }
+                .sermon__quote:after {
+                    content:'\201d';
+                    position:absolute;
+                    font-size:4em;
+                    top:-1rem;
+                    right:0.625rem;
+                }
