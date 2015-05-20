@@ -36,7 +36,7 @@
     typography classes : general type and color styles
     ================================================ */        
     a {
-        text-decoration: none; color:#9bcb3c;
+        text-decoration: none; color:#9bcb3f;
     }
     a:focus, button:focus, input:focus, textarea:focus {
         outline:none; border:0;
@@ -51,20 +51,17 @@
             font-weight:400;
         }
     .tk--brand01 {
-        color:#ed1f24;
+        color:#ed1c24;
     }
     .tk--alt01 {
-        color:#1c1c1c;
-    }
-    .tk--alt02 {
-        color:#fff;
+        color:#a7a9ac;
     }
     .tk--alert {
         color:#ff0000;
     }
 
     .bg--brand01 {
-        background-color:#ed1f24;
+        background-color:#ed1c24;
     }
     .bg--alt01 {
         background-color:#1c1c1c;
@@ -88,6 +85,7 @@
         .clearfix:after {
             clear: both;
         }
+
     .sprite {
         position:relative;
     }
@@ -165,8 +163,8 @@
     }
 
         .section__scrollMe {
-            display: block;
-            margin:2.625em 0 0 0;
+            display: table;
+            margin:2.625em auto 0 auto;
             font-size:2em; 
             color:#fff;
             -webkit-animation-iteration-count:infinite;
@@ -184,6 +182,7 @@
             font-size:2.25em;
             text-align: center;
             line-height: 1;
+            color:#a7a9ac;
         }
             .section__hdr .em {
                 font-size:1.3333333em;
@@ -191,13 +190,6 @@
                 font-style: italic;
             }
 
-    .section--darkText {
-        color:#777;
-        background:none;
-    }
-        .section--darkText .section__hdr {
-            color:#1c1c1c;
-        }
 
 
 
@@ -220,7 +212,7 @@
     /*  section--strip classes
         ================================================ */
         .section--strip {
-            color:#ccc;
+            color:#a7a9ac;
         }
             .section--strip .section__hdr {
                 font-size:1.5em;
@@ -291,7 +283,7 @@
             padding-left:0.625em;
         }
         .mainNav__link {
-            color:#777;
+            color:#1c1c1c;
         }
 
     .mainNav__logo {
@@ -317,6 +309,7 @@
     }
         .introSection .section__hdr {
             margin:4.5em 0 1em 0;
+            color:#fff;
         }
 
 
@@ -438,6 +431,10 @@
                 font-size:2em
             }
 
+        .location__copy {
+            text-align: center;
+        }
+
 
 
 
@@ -452,7 +449,7 @@
 
 
         .sermon__subText {
-            display: block;
+            display: inline-block;
             text-transform: uppercase;
         }
             .sermon__subText .highlight {
@@ -461,24 +458,26 @@
             }
 
 
-        .sermon__titleLink {
-            color:#fff;
-        }
-
         .sermon__title {
             font-size:2.25em;
-            line-height: 1.333333;
+            line-height: 1;
             margin:0.67em 0 0 0;
         }
-            .sermon__title .highlight {
+
+            .sermon__titleLink {
+                color:#fff;
+            }
+
+            .sermon__titleLink .highlight {
                 padding:0.25rem 0.625rem 0.3125rem;
                 display: inline-block;
+                line-height: 1.333333;
             }
 
 
         .sermon__reference {
             margin:0.25em 0;
-            display: block;
+            display: inline-block;
             font-size:1rem;
         }
 
