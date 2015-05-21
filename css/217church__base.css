@@ -288,12 +288,12 @@
 
     .mainNav__logo {
         display: block;
-        width:6.875em; height:2.625em;
+        width:7em; height:2.625em;
         margin:0.6875em 0;
         float:left;
     }
         .mainNav__logo:after {
-            width:6.875em; height:2.625em;
+            width:100%; height:100%;
         }
 
 
@@ -354,6 +354,7 @@
                 color:#333;
                 text-align: center;
                 font-size: 1.75em;
+                font-weight:bold;
                 line-height: 1;
                 margin:0.142857em 0 0 0;
                 width:100%;
@@ -491,6 +492,7 @@
                 display:inline-block;
                 font-size:2.25em;
                 font-style: italic;
+                font-weight:300;
                 line-height: 1.111111;
                 padding:0.5rem 2.5rem 0.625rem;
                 color:#fff;
@@ -509,3 +511,82 @@
                     top:-1rem;
                     right:0.625rem;
                 }
+
+
+
+/*  ================================================
+    missionSection classes
+    ================================================ */
+    .missionSection .container {
+        position:relative;
+    }
+        .mission__hdr {
+            color:#a7a9ac;
+        }
+
+        .mission__goals {
+            font-style:italic;
+            text-align: center;
+        }
+            .mission__goals p {
+                font-size:1.875em;
+                line-height:1.3333334;
+                margin:0;
+            }
+
+
+        .mission__statement {
+            font-size:2em;
+            line-height:1.166667;
+            margin:0.75em 0;
+            text-align: center;
+        }
+            .mission__statement strong {
+                font-weight:400;
+            }
+
+
+    @media screen and (min-width: 48em) {
+        .mission__hdr {
+            margin-left:33.333333%;
+            text-align:left;
+            position: absolute;
+        }
+
+        .mission__goals {
+            text-align: right;
+            margin:7.0625em 0 0 0;
+        }
+        .mission__statement {
+            margin:6.6875rem 0 0 1.5rem;
+            text-align: left;
+            font-size:3em;
+        }
+    }
+
+
+
+
+/*  ================================================
+    storiesSection classes
+    ================================================ */
+    .storiesSection {
+        background:#ed1c24;
+    }
+        .stories__photoBox {
+            border-radius:50%;
+            overflow: hidden;
+            border:6px solid #fff;
+            background:#fff;
+        }
+            @media screen and (max-width:48em) {
+                .stories__photoBox {
+                    width:50%;
+                    margin:0 auto;
+                }
+            }
+            
+            .stories__photo {
+                display:block;
+                width:100%; height:auto;
+            }
