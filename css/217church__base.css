@@ -44,10 +44,10 @@
     .pure-g [class *="pure-u"] {
         font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
     }
-    .tk--hdr-1 {
+    .tk--hdr01 {
         font-weight:300;
     }
-        .tk--hdr-2 {
+        .tk--hdr02 {
             font-weight:400;
         }
     .tk--brand01 {
@@ -549,6 +549,7 @@
     @media screen and (min-width: 48em) {
         .mission__hdr {
             margin-left:33.333333%;
+            padding-left:0.5rem;
             text-align:left;
             position: absolute;
         }
@@ -572,6 +573,7 @@
     ================================================ */
     .storiesSection {
         background:#ed1c24;
+        color:#fff;
     }
         .stories__photoBox {
             border-radius:50%;
