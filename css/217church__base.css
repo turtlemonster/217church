@@ -34,18 +34,23 @@
 
 /*  ================================================
     typography classes : general type and color styles
-    ================================================ */        
+    ================================================ */
+    html, button, input, select, textarea,
+    .pure-g [class *= "pure-u"] {
+        font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
+    }
+
     a {
         text-decoration: none; color:#9bcb3f;
     }
     a:focus, button:focus, input:focus, textarea:focus {
         outline:none; border:0;
     }
-    .pure-g [class *="pure-u"] {
-        font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
-    }
     .tk--hdr01 {
         font-weight:300;
+    }
+    .tk--shadow {
+        text-shadow: 0 2px 3px rgba(0,0,0,0.25);
     }
 
 
@@ -220,16 +225,23 @@
 
         .section__hdr {
             margin:1.388888em 0 1em 0; 
-            font-size:2.25em;
+            font-size:1.75em;
             text-align: center;
             line-height: 1;
             color:#a7a9ac;
+            font-weight:300;
         }
             .section__hdr .em {
                 font-size:1.3333333em;
-                font-weight: bold;
+                font-weight: 400;
                 font-style: italic;
             }
+
+        @media screen and (min-width: 35.5em) {
+            .section__hdr {
+                font-size:2.25em;
+            }
+        }
 
 
 
@@ -273,6 +285,7 @@
     ================================================ */
     .campusLinks__group {
         background:#1c1c1c;
+        display: none;
     }
     .campusLinks__locations {
         text-align: center;
@@ -281,6 +294,9 @@
         @media screen and (min-width: 48em) {
             .campusLinks__locations {
                 margin-left:12.5%;
+            }
+            .campusLinks__group {
+                display: block;
             }
         }
     .campusLink__group {
@@ -312,17 +328,23 @@
         -webkit-box-shadow: 0 0 0.75em 0 rgba(0,0,0,0.4);
         -moz-box-shadow: 0 0 0.75em 0 rgba(0,0,0,0.4);
         box-shadow: 0 0 0.75em 0 rgba(0,0,0,0.4);
-        position:relative;
+        position:fixed;
+        top:0;
+        z-index: 100;
+        width:100%;
     }
 
     .mainNav__list {
         list-style:none;
         margin:1.3125em 0 0 0; padding:0;
         float:right;
+        display:none;
     }
         .mainNav__item {
             display:inline-block;
             padding-left:0.625em;
+            font-weight:bold;
+            text-transform: uppercase;
         }
         .mainNav__link {
             color:#1c1c1c;
@@ -338,6 +360,31 @@
             width:100%; height:100%;
         }
 
+    .mobileNav__btn {
+        float:right;
+        font-size:1.75em;
+        width:1.5em; height: 1.5em;
+        margin:0.6875rem 0 0 0;
+    }
+
+
+    @media screen and (min-width: 48em) {
+        .mainNav__group {
+            position:relative;
+        }
+            .mainNav__group--docked {
+                position:fixed;
+            }
+        
+        .mainNav__list {
+            display:block;
+        }
+        
+        .mobileNav__btn {
+            display: none;
+        }
+    }
+
 
 
 
@@ -348,11 +395,25 @@
     .introSection {
         background-image:url('../img/header__blue-blur.jpg');
         text-align: center;
+        padding-top:4em;
     }
         .introSection .section__hdr {
             margin:4.5em 0 1em 0;
             color:#fff;
         }
+
+    @media screen and (min-width: 48em) {
+        .introSection {
+            padding-top:0;
+        }
+            .introSection--navDocked {
+                padding-top:4em;
+            }
+
+        .introSection .section__hdr {
+            margin:4.5em 0 1em 0;
+        }
+    }
 
 
 
@@ -436,45 +497,41 @@
             }
         }
 
-    .location__map {
+
+    .campus__link {
+        width:100%; height:0;
+        padding:0 0 62%;
+        position:relative;
         display: block;
-        position: relative;
         color:#fff;
         text-align: center;
+        overflow: hidden;
     }
-        .location__map:after {
+
+        .campus__img {
             position:absolute;
-            z-index:0;
-            background: center center / cover no-repeat;
-            opacity:0.2;
+            z-index: 1;
             width:100%; height:100%;
-            left:0; top:0;
-            content:'';
+            display: block;
+            opacity:0.5;
         }
 
-        .location__map--hamilton:after {
-            background-image:url('../img/location__robbinsville.jpg');
-        }
-        .location__map--robbinsville:after {
-            background-image:url('../img/location__robbinsville.jpg');
-        }
-
-
-        .location__label {
+        .campus__label {
             display:block;
             font-size:1.5em;
             font-weight:bold;
             text-transform: uppercase;
-            position: relative;
-            z-index: 1;
-            padding:20% 0 15%;
+            position: absolute;
+            z-index: 2;
+            margin:20% 0 0 0;
+            width:100%;
         }
-            .location__label .fa {
+            .campus__label .fa {
                 display: block;
                 font-size:2em
             }
 
-        .location__copy {
+        .campus__copy {
             text-align: center;
         }
 
@@ -639,11 +696,18 @@
         .stories__photoBox {
             border-radius:50%;
             overflow: hidden;
-            border:6px solid #fff;
             background:#fff;
             width:50%;
             margin:3em auto 0;
+            -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.25);
+            box-shadow: 0 3px 4px 0 rgba(0,0,0,0.25);
+            display: block;
         }
+            .stories__photoBox,
+            .stories__photoBox:link,
+            .stories__photoBox:active {
+                border:4px solid #fff;
+            }
             
             .stories__photo {
                 display:block;
@@ -665,7 +729,6 @@
         }
 
 
-
         @media screen and (min-width:48em) {
             .storiesSection {
                 text-align: left;
@@ -680,3 +743,15 @@
                 margin:0.3em 0;
             }
         }
+
+
+
+/*  ================================================
+    siteFooter__group classes
+    ================================================ */
+    .siteFooter__group {
+        background:#1c1c1c;
+        padding:1.5em 0;
+        color:#fff;
+        text-align: center;
+    }

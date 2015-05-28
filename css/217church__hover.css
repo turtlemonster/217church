@@ -5,7 +5,6 @@ a,
     transition:color 0.5s;
 }
 
-.location__map,
 .sermon__titleLink .highlight,
 .actionBtn,
 .linkBtn {
@@ -13,9 +12,20 @@ a,
     transition:background 0.5s;
 }
 
-.location__map:after {
+.campus__label {
     -webkit-transition:opacity 0.5s;
     transition:opacity 0.5s;
+}
+
+
+.campus__link {
+    -webkit-perspective: 500px;
+    perspective: 500px;
+}
+
+.campus__img {
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 
@@ -33,7 +43,7 @@ a:hover,
 
 .campusLink__group:hover,
 .campusLink__group:hover .fa,
-.location__map:hover,
+.campus__link:hover,
 .sermon__titleLink:hover .highlight,
 .section__scrollMe:hover,
 .actionBtn:hover,
@@ -42,18 +52,24 @@ a:hover,
 }
 
 
-.location__map:hover,
 .sermon__titleLink:hover .highlight,
 .linkBtn:hover {
     background-color:#36c5ed;
 }
 
 
-.location__map:hover:after {
-    opacity:0.7;
+.actionBtn:hover {
+    background:#ed1c24;
 }
 
 
-.actionBtn:hover {
-    background:#ed1c24;
+.campus__link:hover .campus__label {
+    opacity:0;
+}
+
+
+.campus__link:hover .campus__img {
+    -webkit-transform: translate3d(0, 0, 60px);
+    transform: translate3d(0, 0, 60px);
+    opacity:1;
 }

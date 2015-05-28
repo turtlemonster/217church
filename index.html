@@ -19,6 +19,7 @@
     <!--<![endif]-->
     <link rel="stylesheet" type="text/css" href="css/217church__base.css">
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/217church__site.js"></script>
 </head>
 <body>
@@ -41,7 +42,7 @@
     </div>
 </div><!--.campusLinks__group end-->
 
-<div class="mainNav__group">
+<header class="mainNav__group">
     <nav class="mainNav container clearfix">
         <a href="/" title="217church" class="sprite mainNav__logo"><span class="ir">217church</span></a>
         <ul class="mainNav__list">
@@ -67,12 +68,16 @@
                 <a href="#" class="mainNav__link" title="Blog">Blog</a>
             </li>
         </ul>
+
+        <button class="mobileNav__btn" type="button" title="Mobile Navigation">
+            <i class="fa fa-bars"></i>
+        </button>
     </nav>
-</div><!--.mainNav__group end-->
+</header><!--.mainNav__group end-->
 
 <section class="section section--large introSection">
     <div class="container clearfix">
-        <h1 class="tk--hdr01 section__hdr">
+        <h1 class="section__hdr tk--shadow">
             We&rsquo;re the church for people <br>
             <span class="em">who aren&rsquo;t here yet</span>
         </h1>
@@ -85,7 +90,7 @@
 
 <section class="section section--strip clearfix eventsSection">
     <div class="pure-g container">
-        <h1 class="pure-u-1 tk--hdr01 section__hdr">
+        <h1 class="pure-u-1 section__hdr">
             Upcoming Events
         </h1>
         <div class="pure-u-1 pure-u-md-1-2">
@@ -123,29 +128,32 @@
 
 <section class="section section--med locationsSection">
     <div class="pure-g container">
-        <h1 class="pure-u-1 tk--hdr01 section__hdr">
+        <h1 class="pure-u-1 section__hdr">
             1&nbsp;Church &mdash; 2&nbsp;Locations
         </h1>
         <div class="pure-u-1 pure-u-md-1-3 location__group location__group--hamilton">
             <div class="contentBox">
-                <a href="#" target="_blank" title="Hamilton" class="location__map location__map--hamilton bg--brand01">
-                    <span class="location__label">
+                <a href="#" title="Hamilton Campus" class="campus__link bg--brand01">
+                    <span class="campus__label tk--shadow">
                         <i class="fa fa-map-marker"></i>
                         Hamilton
                     </span>
+                    <img src="img/campus__hamilton.jpg" alt="Hamilton Campus" class="campus__img">
                 </a>
-                <p class="location__copy">Our <strong>Hamilton</strong> campus meets at the AMC24 Movie Theater every <strong>Sunday at 10:00 am</strong>.</p>
+                <p class="campus__copy">Our <strong>Hamilton</strong> campus meets at the AMC24 Movie Theater every <strong>Sunday at 10:00 am</strong>.</p>
             </div>
         </div>
+
         <div class="pure-u-1 pure-u-md-1-3 location__group location__group--robbinsville">
             <div class="contentBox">
-                <a href="#" target="_blank" title="Hamilton" class="location__map location__map--robbinsville bg--brand01"> 
-                    <span class="location__label">
+                <a href="#" title="Robbinsville Campus" class="campus__link bg--brand01">
+                    <span class="campus__label tk--shadow">
                         <i class="fa fa-map-marker"></i>
                         Robbinsville
                     </span>
+                    <img src="img/campus__robbinsville.jpg" alt="Robbinsville Campus" class="campus__img">
                 </a>
-                <p class="location__copy">Our <strong>Robbinsville</strong> campus meets at the Sharon Elementary School every <strong>Sunday at 11:00 am</strong>.</p>
+                <p class="campus__copy">Our <strong>Robbinsville</strong> campus meets at the Sharon Elementary School every <strong>Sunday at 11:00 am</strong>.</p>
             </div>
         </div>
     </div>
@@ -180,7 +188,7 @@
 
 <section class="section section--med missionSection">
     <div class="pure-g container">
-        <h1 class="pure-u-1 pure-u-md-1-2 tk--hdr01 section__hdr mission__hdr">Our Mission</h1>
+        <h1 class="pure-u-1 pure-u-md-1-2 section__hdr mission__hdr">Our Mission</h1>
         <div class="pure-u-1 pure-u-md-1-3 mission__goals tk--brand01">
             <p><strong>10,000</strong> Disciples</p>
             <p><strong>1,000</strong> Small groups</p>
@@ -190,7 +198,7 @@
         </div>
         <div class="pure-u-1 pure-u-md-2-3 pure-u-lg-1-2">
             <h2 class="tk--hdr01 mission__statement">
-                217church is a family sent to <strong>rebuild</strong> lives, <strong>restore</strong> relationships, and <strong>renew</strong> communities
+                217church is a family sent on mission to <strong>rebuild</strong> lives, <strong>restore</strong> relationships, and <strong>renew</strong> communities
             </h2>
             <p class="mission__link"><a href="#" class="linkBtn bg--brand01" title="Learn More">
                 Learn More
@@ -204,30 +212,43 @@
     <div class="pure-g container">
         <div class="pure-u-1 pure-u-md-1-4">
             <div class="contentBox">
-                <div class="stories__photoBox">
+                <a href="#" class="stories__photoBox">
                     <img class="stories__photo" alt="Daryl Updike" src="img/217stories__daryl-updike.jpg">
-                </div>
+                </a>
             </div>
         </div>
         <div class="pure-u-1 pure-u-md-3-4">
             <div class="contentBox">
                 <h2 class="stories__hdr tk--hdr01">
-                    <a href="#" title="217 Stories : Meet Daryl" class="tk--fff">217 Stories : Meet Daryl</a>
+                    <a href="#" title="217 Stories - Meet Daryl" class="tk--fff">217 Stories &ndash; Meet Daryl</a>
                 </h2>
                 <h1 class="stories__title">
-                    <a href="#" title="217 Stories : Meet Daryl" class="tk--fff">What I thought was working&hellip; was actually making things worse</a>
+                    <a href="#" title="217 Stories - Meet Daryl" class="tk--fff">What I thought was working&hellip; was actually making things worse</a>
                 </h1>
                 <div class="stories__excerpt">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
                 </div>
-                <p><a href="#" class="actionBtn" title="Read More">
-                    Read More
+                <p><a href="#" class="actionBtn" title="Watch Daryl&rsquo;s Story">
+                    Watch Daryl&rsquo;s Story
                 </a></p>
             </div>
         </div>
     </div>
 </section><!--.storiesSection end-->
 
+
+
+
+
+
+
+<footer class="siteFooter__group">
+    <div class="pure-g container">
+        <div class="pure-u-1">
+            &copy; Copyright 2015 217church. All Rights Reserved. &nbsp;&nbsp; <a href="#" title="Privacy Policy">Privacy Policy</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="#" title="Terms of Use">Terms of Use</a>
+        </div>
+    </div>
+</footer><!--.siteFooter__group end-->
 
 
 </body>
